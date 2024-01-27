@@ -1,0 +1,15 @@
+import numpy as np
+
+file_name = "shuffled.npy"
+training_data = np.load(file_name, allow_pickle=True)
+# ここから
+
+<概要>
+・training_data は
+    - 60*80 のグレースケール配列(array型)
+    - [speed, steering](list型)
+　を１セットとして格納されている三次元（添付：training_data.png)
+　speed は -1023から1023までの値をとる（負：後進、正：前進）
+　steering は -30から30までの値をとる（負：左向き、正：右向き）
+
+・"self_driving"で学習済みモデルを保存してほしいちょ
